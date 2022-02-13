@@ -20,7 +20,7 @@ jobs:
           node-version: 16.x
 
       - name: Install NPM packages
-        run: yarn
+        run: yarn install --frozen-lockfile --silent
 
       - name: Build project
         run: yarn build

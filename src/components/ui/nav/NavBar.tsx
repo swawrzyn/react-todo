@@ -5,9 +5,9 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Todos", href: "todos", current: true },
-  { name: "About", href: "about", current: false },
-  { name: "Login/Register", href: "auth", current: false },
+  { id: 1, name: "Todos", href: "" },
+  { id: 2, name: "About", href: "about" },
+  { id: 3, name: "Login/Register", href: "auth" },
 ];
 
 // function classNames(...classes: string[]) {
@@ -49,6 +49,7 @@ export default function NavBar() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
+                        key={item.id}
                         to={`/${item.href}`}
                         // aria-current={({ isActive }) =>
                         //   isActive ? "page" : undefined
